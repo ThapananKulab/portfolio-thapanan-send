@@ -8,7 +8,7 @@ export default function Footer(props) {
     <div className="footer-div">
       <Fade>
         <p className="footer-text" style={{ color: props.theme.secondaryText }}>
-          © Thpanan Kulab. All rights reserved.
+          © Thapanan Kulab. All rights reserved.
         </p>
       </Fade>
     </div>
