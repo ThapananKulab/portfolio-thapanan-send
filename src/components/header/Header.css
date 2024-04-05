@@ -1,312 +1,42 @@
-/* header */
-.header-container-light {
-  position: sticky;
-  inset: 0;
-  background-color: white;
-  z-index: 10;
-  box-shadow: 0 2px 2px rgb(230 230 230);
+:root {
+  --background-primary: #1e1e1e;
+  --background-secondary: #2d2d2d;
+  --foreground: #d4d4d4;
+  --accent: #4e94ce; /* iOS blue */
 }
 
-.header-container-dark {
-  position: sticky;
-  inset: 0;
-  background-color: #8d8d8d;
-  z-index: 10;
-  box-shadow: 0 2px 2px rgb(230 230 230);
-}
-
-.header {
-  display: block;
-  max-width: 90%;
-  margin: auto;
-}
-
-.header ul {
-  margin: 0;
-  padding: 10px;
-  list-style: none;
-  overflow: hidden;
-}
-
-.grey-color {
-  color: #868e96;
-}
-
-.header li {
-  display: block;
-  padding: 15px 20px 0px 20px;
-}
-
-.header li a {
-  text-decoration: none;
-}
-
-.header .logo {
-  display: block;
-  float: left;
-  font-size: 2em;
-  text-decoration: none;
-  margin-top: 10px;
-  line-height: normal;
-}
-
-.header .logo-name {
-  font-family: 'Agustina Regular';
-  font-weight: bold;
-  padding: 0 10px;
-}
-
-/* menu */
-.menu {
-  font-family: 'Google Sans Regular';
-}
-
-.header .menu {
-  clear: both;
-  max-height: 0;
-  transition: max-height 0.2s ease-out;
-}
-
-/* menu icon */
-.header .menu-icon {
-  cursor: pointer;
-  display: block;
-  float: right;
-  padding: 28px 20px;
-  position: relative;
-  user-select: none;
-}
-
-.header .menu-icon .navicon {
-  background: #fcd933;
-  display: block;
-  height: 2px;
-  position: relative;
-  transition: background 0.2s ease-out;
-  width: 18px;
-}
-
-.header .menu-icon .navicon:before,
-.header .menu-icon .navicon:after {
-  background: #fcd933;
-  content: '';
-  display: block;
-  height: 100%;
-  position: absolute;
-  transition: all 0.2s ease-out;
-  width: 100%;
-}
-
-.header .menu-icon .navicon:before {
-  top: 5px;
-}
-
-.header .menu-icon .navicon:after {
-  top: -5px;
-}
-
-/* menu btn */
-.header .menu-btn {
-  display: none;
-}
-
-.header .menu-btn:checked ~ .menu {
-  max-height: 370px;
+nav {
   display: flex;
-  width: 100%;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 60px; /* Adjust based on your preference */
+  background-color: rgba(255, 255, 255, 0.7); /* More translucent white */
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon {
-  background: transparent;
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent); /* iOS blue for icons */
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 8px 16px;
+  font-size: 1.5rem; /* Adjust icon size */
+  border-radius: 10px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:before {
-  transform: rotate(-45deg);
+nav a:hover,
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.8); /* Highlight effect */
+  transform: translateY(-2px); /* Slight raise effect for interactivity */
 }
 
-.header .menu-btn:checked ~ .menu-icon .navicon:after {
-  transform: rotate(45deg);
-}
-
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
-.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
-  top: 0;
-}
-
-.current-link {
-  margin: 2px 5px 20px 10px;
-  transition: all 0.2s ease-in-out;
-  color: #ffffff;
-  position: relative;
-  font-weight: bolder;
-}
-
-.current-link:after {
-  content: '';
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 0.15em;
-  bottom: 0;
-  width: 100%;
-  background-color: #fcd933;
-  transition: all ease-in-out 280ms;
-}
-
-.homei {
-  /* display: flex; */
-  margin: 2px 5px 20px 10px;
-  transition: all 0.2s ease-in-out;
-  color: #ffffff;
-  position: relative;
-}
-
-.homei::after {
-  content: '';
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 0.15em;
-  bottom: 0;
-  width: 0%;
-  background-color: #fcd933;
-  transition: all ease-in-out 280ms;
-}
-
-.homei:hover::after {
-  width: 100%;
-}
-
-.ec {
-  margin: 2px 5px 20px;
-  transition: all 0.2s ease-in-out;
-  color: #ffffff;
-}
-
-.ec::after {
-  content: '';
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 0.15em;
-  bottom: 0;
-  width: 0%;
-  background-color: #fcd933;
-  transition: all ease-in-out 280ms;
-}
-
-.ec:hover::after {
-  width: 100%;
-}
-
-.xp {
-  margin: 2px 5px 20px;
-  transition: all 0.2s ease-in-out;
-  color: #ffffff;
-}
-
-.xp::after {
-  content: '';
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 0.15em;
-  bottom: 0;
-  width: 0%;
-  background-color: #fcd933;
-  transition: all ease-in-out 280ms;
-}
-
-.xp:hover::after {
-  width: 100%;
-}
-
-.projects {
-  margin: 2px 5px 20px;
-  transition: all 0.2s ease-in-out;
-  color: #ffffff;
-}
-
-.projects::after {
-  content: '';
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 0.15em;
-  bottom: 0;
-  width: 0%;
-  background-color: #fcd933;
-  transition: all ease-in-out 280ms;
-}
-
-.projects:hover::after {
-  width: 100%;
-}
-
-.cr {
-  margin: 2px 5px 20px;
-  transition: all 0.2s ease-in-out;
-  color: #ffffff;
-}
-
-.cr::after {
-  content: '';
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  height: 0.15em;
-  bottom: 0;
-  width: 0%;
-  background-color: #fcd933;
-  transition: all ease-in-out 280ms;
-}
-
-.cr:hover::after {
-  width: 100%;
-}
-
-/* 48em = 768px */
-@media (min-width: 48em) {
-  .header li {
-    float: left;
-  }
-
-  .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  .header .menu {
-    max-height: none;
-  }
-
-  .header .menu-icon {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  .header .logo {
-    display: block;
-    float: left;
-    font-size: 1.25em;
-    text-decoration: none;
-    margin-top: 15px;
-    line-height: normal;
-  }
-
-  .header {
-    padding-top: 10px;
-    text-align: center;
-  }
-}
-
-@media (max-width: 960px) and (min-width: 768px) {
-  .header {
-    font-size: 12px;
+/* Media Query for devices with a max-width of 767px, including Samsung devices */
+@media only screen and (max-width: 767px) {
+  nav a {
+    margin: 0 6px; /* Tighter spacing */
+    padding: 6px 12px; /* Smaller touch targets */
+    font-size: 1.3rem; /* Adjust icon size for smaller screens */
   }
 }
