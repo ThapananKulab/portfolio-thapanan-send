@@ -37,6 +37,12 @@ export default function Contact(props) {
               >
                 {ContactData['description']}
               </p>
+              <p
+                className="contact-header-detail-text subTitle"
+                style={{ color: theme.secondaryText }}
+              >
+                {ContactData['description2']}
+              </p>
               <SocialMedia page="contact" />
             </div>
           </div>

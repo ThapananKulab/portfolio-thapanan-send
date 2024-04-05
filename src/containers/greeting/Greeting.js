@@ -38,7 +38,7 @@ export default function Greeting(props) {
 
               <div
                 className="greeting-text-div subTitle"
-                style={{ color: theme.secondaryText, marginTop: '20px' }} // Adjust the top margin as needed
+                style={{ color: theme.secondaryText, marginBottom: '20px' }}
               >
                 <span className="greeting-text-static">I'm a </span>
                 <Typewriter

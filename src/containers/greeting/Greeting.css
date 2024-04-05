@@ -27,11 +27,18 @@
   display: flex;
   margin-top: 20px;
 }
+.portfolio-repo-btn-div {
+  margin-bottom: 20px; /* Adjust the value as needed */
+}
+.greeting-image-div {
+  margin-top: 20px; /* Adjust the value as needed */
+}
 
 .greeting-text {
   margin-top: 110px;
   font-size: 70px;
   font-family: 'Google Sans Bold';
+  margin-bottom: 40px; /* Adjust the bottom margin to increase space below the greeting text and image */
 }
 
 .greeting-nickname {
@@ -53,6 +60,7 @@
 }
 
 .greeting-image-div > * {
+  margin-bottom: 40px;
   max-width: 100%;
   height: auto;
 }
@@ -105,69 +113,50 @@
     max-width: 900px;
   }
 }
-@media (min-width: 1380px) and (max-width: 1920px) {
-  .greeting-text {
-    font-size: 60px; /* Adjusted for large screens, but not excessively large screens */
-  }
-  .greeting-text-div {
-    font-size: 45px;
-  }
-  /* Additional adjustments */
-}
-@media screen and (min-width: 1920px) {
-  .greeting-main .greeting-text-div .greeting-text {
-    margin-bottom: 30px; /* Increase space below the greeting text */
-  }
-
-  .greeting-main .greeting-text-div.subTitle {
-    margin-top: 30px; /* Increase space above the typewriter subtitle */
-  }
-}
 
 @media (max-width: 768px) {
+  /* Adjustments for the button-greeting-div, button, and other elements as previously discussed */
+
+  .greeting-image-div {
+    margin-bottom: 30px; /* Add more space below the image */
+  }
+
+  /* Adjust the button-greeting-div to better accommodate the buttons on smaller screens */
   .button-greeting-div {
     justify-content: space-around;
+    flex-wrap: wrap; /* Allow buttons to wrap and avoid squeezing */
   }
 
+  .button {
+    width: 150px; /* Reduce the width to prevent squeezing */
+    padding: 10px 0; /* Adjust padding to ensure text remains vertically centered */
+    font-size: 15px; /* Slightly reduce the font size for better fit */
+    margin: 10px 5px; /* Add some margin around buttons to prevent them from touching */
+  }
+
+  /* Further adjustments to the greeting text and nickname for better alignment and spacing */
   .greeting-text {
-    font-size: 30px;
-    margin-top: 0px;
-    text-align: center;
-  }
-
-  .greeting-text-container {
-    text-align: center;
-  }
-
-  .greeting-hand-wave {
-    width: 30px;
+    font-size: 30px; /* Adjusted size for readability */
+    margin-top: 20px; /* Adjust top margin to ensure adequate spacing */
+    text-align: center; /* Ensure text is centered */
   }
 
   .greeting-nickname {
-    font-size: 25px;
-    text-align: center;
+    font-size: 20px; /* Slightly reduce font size for better fit */
+    margin-top: 10px; /* Adjust top margin for better spacing */
+    text-align: center; /* Ensure nickname is centered */
   }
 
   .greeting-text-div {
-    font-size: 20px !important;
-    margin-right: 0px;
-    line-height: normal;
-    margin-bottom: 20px;
-    /* text-align: center; */
+    font-size: 18px; /* Adjust font size for consistency */
+    margin-bottom: 15px; /* Adjust bottom margin for spacing */
+    text-align: center; /* Ensure text div content is centered */
   }
 
+  /* Adjust the flex-direction and spacing of the main greeting container for better layout */
   .greeting-main {
-    /* display: block; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .portfolio-repo-btn-div {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center elements vertically */
+    align-items: center; /* Center elements horizontally */
   }
 }

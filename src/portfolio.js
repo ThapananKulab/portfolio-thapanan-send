@@ -332,7 +332,8 @@ const contactPageData = {
   contactSection: {
     title: 'Contact Me',
     profile_image_path: 'port-2.png',
-    description: '📞 Phone: 081-913-9936',
+    description: '📞 : 081-913-9936',
+    description2: '📧 : thapanan.kularb@gmail.com',
   },
 }
 
