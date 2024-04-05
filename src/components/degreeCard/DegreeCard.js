@@ -68,6 +68,7 @@ function DegreeCard(props) {
                 href={degree.website_link}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Visit Website" // Describe the link's purpose
               ></a>
             )}
           </div>
