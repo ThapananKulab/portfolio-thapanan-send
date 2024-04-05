@@ -3,8 +3,24 @@
   --background-secondary: #2d2d2d;
   --foreground: #d4d4d4;
   --accent: #4e94ce; /* iOS blue */
+  --toggle-bg-mobile: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Slightly dark background for toggle on mobile */
+  --toggle-border-mobile: rgba(
+    0,
+    0,
+    0,
+    0.2
+  ); /* Subtle border color for mobile toggle */
 }
 
+.theme-toggle-link {
+  /* Existing styles for theme toggle link */
+  cursor: pointer; /* Ensures it's clear the toggle is interactive */
+}
 nav {
   display: flex;
   justify-content: center;
@@ -12,6 +28,35 @@ nav {
   height: 60px;
   background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white */
   backdrop-filter: blur(10px); /* iOS-style blur effect */
+}
+nav a,
+.theme-toggle-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent); /* iOS blue for icons */
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 8px 16px; /* Increase padding for larger clickable area */
+  font-size: 1.5rem; /* Adjust icon size */
+  border-radius: 10px; /* Rounded corners */
+  transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+nav a:hover,
+nav a.active,
+.theme-toggle-link:hover {
+  /* Apply hover effects to theme toggle as well */
+  background-color: rgba(255, 255, 255, 0.8); /* Highlight effect */
+  transform: translateY(-2px); /* Slight raise effect for interactivity */
+}
+.theme-toggle-link {
+  position: absolute;
+  right: 0; /* Aligns the toggle to the right */
+  top: 50%; /* Centers it vertically */
+
+  transform: translateY(-50%); /* Adjusts for exact vertical centering */
+  cursor: pointer; /* Indicates the element is clickable */
 }
 
 nav a {
@@ -26,6 +71,13 @@ nav a {
   border-radius: 10px; /* Rounded corners */
   transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
 }
+nav a:hover,
+nav a.active,
+.theme-toggle-link:hover {
+  /* Apply hover effects to theme toggle as well */
+  background-color: rgba(255, 255, 255, 0.8); /* Highlight effect */
+  transform: translateY(-2px); /* Slight raise effect for interactivity */
+}
 
 nav a:hover,
 nav a.active {
@@ -33,11 +85,27 @@ nav a.active {
   transform: translateY(-2px); /* Slight raise effect for interactivity */
 }
 
-/* Media Query for devices with a max-width of 767px, including Samsung devices */
 @media only screen and (max-width: 767px) {
-  nav a {
-    margin: 0 6px; /* Tighter spacing */
-    padding: 6px 12px; /* Smaller touch targets */
-    font-size: 1.3rem; /* Adjust icon size for smaller screens */
+  nav a,
+  .theme-toggle-link {
+    margin: 0 6px; /* Consistent spacing */
+    padding: 6px 12px; /* Uniform touch targets */
+    font-size: 1.3rem; /* Uniform icon size */
+  }
+
+  .theme-toggle-link {
+    position: static;
+    margin-right: 10px;
+    margin-top: 30px; /* ปรับค่านี้เพื่อให้ได้ตำแหน่งที่ต้องการ */
+    background-color: var(--toggle-bg-mobile);
+    border: 1px solid var(--toggle-border-mobile);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+
+  .theme-toggle-link:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Highlight on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15); /* Enhanced lifted effect */
   }
 }
