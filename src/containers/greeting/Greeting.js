@@ -4,7 +4,7 @@ import { Fade } from 'react-reveal'
 import { style } from 'glamor'
 import Typewriter from 'typewriter-effect'
 import FeelingProud from './FeelingProud'
-import WaveHand from '../../assets/images/waving-hand.png'
+import WaveHand from '../../assets/images/layers.png'
 import './Greeting.css'
 import { Icon } from '@iconify/react'
 
@@ -27,13 +27,13 @@ export default function Greeting(props) {
           <div className="greeting-text-div">
             <div className="greeting-text-container">
               <h1 className="greeting-text" style={{ marginBottom: '20px' }}>
-                {greeting.title}
+                {greeting.title}&nbsp;
                 <img
                   className="greeting-hand-wave"
                   src={WaveHand}
                   alt="waving-hand"
                 />
-                ,{greeting.title2}
+                ,&nbsp;{greeting.title2}
               </h1>
 
               <div
