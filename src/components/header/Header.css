@@ -95,7 +95,7 @@ nav a.active {
   .theme-toggle-link {
     position: static;
     margin-right: 10px;
-    margin-top: 30px; /* ปรับค่านี้เพื่อให้ได้ตำแหน่งที่ต้องการ */
+    margin-top: 32px; /* ปรับค่านี้เพื่อให้ได้ตำแหน่งที่ต้องการ */
     background-color: var(--toggle-bg-mobile);
     border: 1px solid var(--toggle-border-mobile);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
