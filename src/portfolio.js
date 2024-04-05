@@ -208,8 +208,10 @@ const certifications = {
 const experience = {
   title: 'Experience',
   subtitle: 'Internship',
-  description: 'I have 2 internships at a school bank and at a biolab.',
-  header_image_path: 'experience.svg',
+  description:
+    'I have two internships at a school bank at Attawit Commercial Technology College and at a biolab company..',
+  header_image_path:
+    'https://i.pinimg.com/736x/75/ca/72/75ca729bce801bfa07cee79452078f77.jpg',
   sections: {
     title: 'Work Experience',
     experiences: [
@@ -242,7 +244,8 @@ const experience = {
 // Projects Page
 const projectsHeader = {
   title: 'Projects',
-  description: 'This is All project development',
+  description:
+    'This is my project. This section takes a deeper look at the projects. There was a lot I got to do in the classroom and learn on my own. and proceed from the beginning until the closing of various programming courses.',
   avatar_image_path: 'projects_image.svg',
 }
 

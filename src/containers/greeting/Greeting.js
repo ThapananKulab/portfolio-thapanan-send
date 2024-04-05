@@ -26,7 +26,7 @@ export default function Greeting(props) {
         <div className="greeting-main">
           <div className="greeting-text-div">
             <div className="greeting-text-container">
-              <h1 className="greeting-text">
+              <h1 className="greeting-text" style={{ marginBottom: '20px' }}>
                 {greeting.title}
                 <img
                   className="greeting-hand-wave"
@@ -35,9 +35,10 @@ export default function Greeting(props) {
                 />
                 ,{greeting.title2}
               </h1>
+
               <div
                 className="greeting-text-div subTitle"
-                style={{ color: theme.secondaryText }}
+                style={{ color: theme.secondaryText, marginTop: '20px' }} // Adjust the top margin as needed
               >
                 <span className="greeting-text-static">I'm a </span>
                 <Typewriter

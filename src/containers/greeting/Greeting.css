@@ -105,6 +105,24 @@
     max-width: 900px;
   }
 }
+@media (min-width: 1380px) and (max-width: 1920px) {
+  .greeting-text {
+    font-size: 60px; /* Adjusted for large screens, but not excessively large screens */
+  }
+  .greeting-text-div {
+    font-size: 45px;
+  }
+  /* Additional adjustments */
+}
+@media screen and (min-width: 1920px) {
+  .greeting-main .greeting-text-div .greeting-text {
+    margin-bottom: 30px; /* Increase space below the greeting text */
+  }
+
+  .greeting-main .greeting-text-div.subTitle {
+    margin-top: 30px; /* Increase space above the typewriter subtitle */
+  }
+}
 
 @media (max-width: 768px) {
   .button-greeting-div {

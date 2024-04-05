@@ -26,7 +26,8 @@ function Education(props) {
                 className="experience-header-detail-text subTitle"
                 style={{ color: theme.secondaryText }}
               >
-                I about my activities. My major and All certifications.
+                About my activities My major and all certifications.and skills
+                that I received from my teaching institute to knowledge.
               </p>
             </div>
           </div>
